@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Мишина А. А.">
+  <title>Лабораторная работа №2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/beige.css" id="theme">
+  
+  
+  
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Лабораторная работа №2</h1>
+  <p class="subtitle">Основы информационной безопасности</p>
+  <p class="author">Мишина А. А.</p>
+  <p class="date">28 февраля 2024</p>
+</section>
+
+<section id="докладчик" class="slide level2">
+<h2>Докладчик</h2>
+<ul>
+<li>Мишина Анастасия Алексеевна</li>
+<li>НПИбд-02-22</li>
+</ul>
+</section>
+<section>
+<section id="выполнение-лабораторной-работы" class="title-slide slide level1">
+<h1>Выполнение лабораторной работы</h1>
+
+</section>
+<section id="цель-работы" class="slide level2">
+<h2>Цель работы</h2>
+<ul>
+<li>Получение практических навыков работы в консоли с атрибутами файлов, закрепление теоретических основ дискреционного разграничения доступа в современных системах с открытым кодом на базе ОС Linux.</li>
+</ul>
+</section>
+<section id="создание-пользователя-guest" class="slide level2">
+<h2>Создание пользователя guest</h2>
+<figure>
+<img data-src="image/1.png" id="fig:001" style="width:50.0%" alt="Создание пользователя, определение домашнего каталога" /><figcaption aria-hidden="true">Создание пользователя, определение домашнего каталога</figcaption>
+</figure>
+</section>
+<section id="информация-о-пользователе-guest" class="slide level2">
+<h2>Информация о пользователе guest</h2>
+<figure>
+<img data-src="image/2.png" id="fig:002" style="width:70.0%" alt="Команды id и groups" /><figcaption aria-hidden="true">Команды id и groups</figcaption>
+</figure>
+</section>
+<section id="файл-etcpasswd" class="slide level2">
+<h2>Файл /etc/passwd</h2>
+<figure>
+<img data-src="image/3.png" id="fig:003" style="width:35.0%" alt="Просмотр /etc/passwd" /><figcaption aria-hidden="true">Просмотр /etc/passwd</figcaption>
+</figure>
+</section>
+<section id="директории-и-поддиректории" class="slide level2">
+<h2>Директории и поддиректории</h2>
+<figure>
+<img data-src="image/4.png" id="fig:004" style="width:70.0%" alt="Просмотр существующих директорий, расширенных атрибутов поддиректорий" /><figcaption aria-hidden="true">Просмотр существующих директорий, расширенных атрибутов поддиректорий</figcaption>
+</figure>
+</section>
+<section id="создание-директории-dir1" class="slide level2">
+<h2>Создание директории dir1</h2>
+<figure>
+<img data-src="image/5.png" id="fig:005" style="width:70.0%" alt="Права доступа новой директории dir1" /><figcaption aria-hidden="true">Права доступа новой директории dir1</figcaption>
+</figure>
+</section>
+<section id="изменение-прав-доступа-dir1" class="slide level2">
+<h2>Изменение прав доступа dir1</h2>
+<figure>
+<img data-src="image/6.png" id="fig:006" style="width:70.0%" alt="Снятие прав доступа новой директории dir1" /><figcaption aria-hidden="true">Снятие прав доступа новой директории dir1</figcaption>
+</figure>
+</section>
+<section id="операции-для-заполнения-таблиц" class="slide level2">
+<h2>Операции для заполнения таблиц</h2>
+<figure>
+<img data-src="image/7.png" id="fig:007" style="width:70.0%" alt="Попытки выполнения операций при разных правах доступа" /><figcaption aria-hidden="true">Попытки выполнения операций при разных правах доступа</figcaption>
+</figure>
+</section>
+<section id="операции-для-заполнения-таблиц-1" class="slide level2">
+<h2>Операции для заполнения таблиц</h2>
+<figure>
+<img data-src="image/8.png" id="fig:008" style="width:50.0%" alt="Попытки выполнения операций при разных правах доступа" /><figcaption aria-hidden="true">Попытки выполнения операций при разных правах доступа</figcaption>
+</figure>
+</section>
+<section id="установленные-права-и-разрешенные-действия" class="slide level2">
+<h2>Установленные права и разрешенные действия</h2>
+<table>
+<caption>Установленные права и разрешенные действия</caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Права директории</th>
+<th>Права файла</th>
+<th>Создание файла</th>
+<th>Удаление файла</th>
+<th>Запись в файл</th>
+<th>Чтение файла</th>
+<th>Смена директории</th>
+<th>Просмотр файлов и директории</th>
+<th>Переименование файла</th>
+<th>Смена атрибутов файла</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>000</td>
+<td>000</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>100</td>
+<td>100</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>+</td>
+<td>-</td>
+<td>-</td>
+<td>+</td>
+</tr>
+<tr class="odd">
+<td>200</td>
+<td>200</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>300</td>
+<td>300</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>-</td>
+<td>+</td>
+<td>-</td>
+<td>+</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="установленные-права-и-разрешенные-действия-1" class="slide level2">
+<h2>Установленные права и разрешенные действия</h2>
+<table>
+<caption>Установленные права и разрешенные действия</caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Права директории</th>
+<th>Права файла</th>
+<th>Создание файла</th>
+<th>Удаление файла</th>
+<th>Запись в файл</th>
+<th>Чтение файла</th>
+<th>Смена директории</th>
+<th>Просмотр файлов и директории</th>
+<th>Переименование файла</th>
+<th>Смена атрибутов файла</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>400</td>
+<td>400</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>+</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>500</td>
+<td>500</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>-</td>
+<td>+</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>600</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>+</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>700</td>
+<td>700</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="установленные-права-и-разрешенные-действия-2" class="slide level2">
+<h2>Установленные права и разрешенные действия</h2>
+<table>
+<caption>Минимальные права для совершения операций</caption>
+<thead>
+<tr class="header">
+<th>Операция</th>
+<th>Минимальные права <br> на директорию</th>
+<th>Минимальные права <br> на файл</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Создание файла</td>
+<td>300</td>
+<td>200</td>
+</tr>
+<tr class="even">
+<td>Удаление файла</td>
+<td>300</td>
+<td>200</td>
+</tr>
+<tr class="odd">
+<td>Чтение файла</td>
+<td>500</td>
+<td>400</td>
+</tr>
+<tr class="even">
+<td>Запись в файл</td>
+<td>300</td>
+<td>200</td>
+</tr>
+<tr class="odd">
+<td>Переименование файла</td>
+<td>300</td>
+<td>200</td>
+</tr>
+<tr class="even">
+<td>Создание поддиректории</td>
+<td>300</td>
+<td>300</td>
+</tr>
+<tr class="odd">
+<td>Удаление поддиректории</td>
+<td>300</td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="вывод" class="slide level2">
+<h2>Вывод</h2>
+<p>В ходе выполнения данной лабораторной работы, я получила практические навыки работы в консоли с атрибутами файлов, закрепила теоретические основы дискреционного разграничения доступа в современных системах с открытым кодом на базе ОС Linux.</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
